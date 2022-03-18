@@ -3,18 +3,49 @@ var quizStart = document.getElementById("quiz-start");
 var timer = document.getElementById("quiz-time");
 var highScore = document.getElementById("quiz-score");
 var quizText = document.getElementById("quiz-body");
+var quizAnswers = document.getElementById("quiz-answer");
+var answerSelected = "";
 
 // Code for High Score
 
 // script for button response
 quizStart.addEventListener("click", function() {
-    console.log('hi');
-    
+    console.log('Start');
+})
+
+quizAnswers.addEventListener("event", function() {
+    if (quizAnswers) {
+        answerSelected = quizAnswers.value
+    }
+    console.log('Answer');
 });
+// Create The Questions
+// function createQuestions () {
+//     const output = [];
+//     codeQuestions.forEach(
+//         (currentQuestion, questionNumber) => {
+//             const answers = [];
+//             for(letter in currentQuestion.answers){
+//                 answers.push(
+//                     <label>
+//                         <input type="radio" name="question${questionNumber}" value="${letter}">
+//                             ${letter} :
+//                             ${currentQuestion.answer[letter]}
+//                         </input>
+//                     </label>
+//                 );
+//             }
+//             output.push (
+//                 <div class="question">${currentQuestion.question}</div>,
+//                 <div class="answer">${answer.join(")}</div>,
+//             );
+//         }
+//     );
+// }
 
 
 // Questions
-let questions = [
+let codeQuestions = [
     {
         set: 1,
         question: "What does HTML stand for?",
