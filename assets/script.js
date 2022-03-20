@@ -1,22 +1,21 @@
 // Global Variables
-var quizStart = document.getElementById("quiz-start");
-var timer = document.getElementById("quiz-time");
-var highScore = document.getElementById("quiz-score");
-var quizText = document.getElementById("quiz-body");
-var quizAnswer = document.getElementById("quiz-answerTrue");
-var quizWrong = document.getElementById("quiz-answer");
-var quizBox = document.getElementById("quiz-question-set");
-var startPage = document.getElementById("quiz-text");
-var startButton = document.getElementById("quiz-button");
-var totalTime = 75;
-var totalPoints = 0;
+const quizStart = document.getElementById("quiz-start");
+const timer = document.getElementById("quiz-time");
+const highScore = document.getElementById("quiz-score");
+const quizText = document.getElementById("quiz-body");
+const quizAnswer = document.getElementById("quiz-answerTrue");
+const quizWrong = document.getElementById("quiz-answer");
+const quizBox = document.getElementById("quiz-question-set");
+const startPage = document.getElementById("quiz-text");
+const startButton = document.getElementById("quiz-button");
+const totalTime = 75;
+const totalPoints = 0;
 
 // Start Quiz Code
 document.getElementById("quiz-start").onclick = startQuiz;
 
 function startQuiz () {
-    document.getElementById("quiz-question-set").style.visibility = "visible";
-    document.getElementById("quiz-text").style.visibility = "hidden";
+    startPage.innerHTML = 'You did it billy';
 }
 
 // Code for High Score
