@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .quiz-box {
     background-color: white;
     color: black;
@@ -44,12 +48,12 @@
     cursor: pointer;
 }
 
-.quiz-text {
+.quiz-body .quiz-title {
   text-align: center;
   font-size: large;
 }
 
-.question-control {
+.quiz-answerTrue, quiz-answer1, quiz-answer2, quiz-answer3 {
   border: none;
   background-color: purple;
   border-radius: 25px;
@@ -66,9 +70,10 @@
   text-decoration: none;
 }
 
-.hidden {
-  display: none;
+.quiz-time {
+  color: black;
 }
+
 
 @media (max-width: 690px) {
     .btn {
