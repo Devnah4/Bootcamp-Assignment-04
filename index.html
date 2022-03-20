@@ -17,12 +17,12 @@
             <h2 class="quiz-nav-btn" id="quiz-time">Timer</h2>
         </div>
         <div class="quiz-jumbo">
-            <div class="quiz-title">
+            <div class="quiz-title" visible>
             <header>
                 <h1>Coding Quiz Challenge</h1>
             </header>
             </div>
-            <div class="quiz-text">
+            <div class="quiz-text" visible>
                 <p id="quiz-body">
                     <br>
                     Hello Student, hope you're ready to test your kowledge!
@@ -38,22 +38,12 @@
             <div class="quiz-box-btn">
                 <button class="quiz-btn" id="quiz-start">Begin</button>
             </div>
-            <div>
+            <div class="quiz-question-set" hidden>
                 <h1 class="quiz-text">This is a Question</h1>
-                <form class="quiz-statements">
-                    <label class="question-control">
-                    <input type="radio" name="choice"  class="quiz-answer">Answer 1</input>
-                    </label>
-                    <label class="question-control">
-                    <input type="radio" name="choice"  class="quiz-answer">Answer 2</input>
-                    </label>
-                    <label class="question-control">
-                    <input type="radio" name="choice"  class="quiz-answer">Answer 3</input>
-                    </label>
-                    <label class="question-control">
-                    <input type="radio" name="choice"  class="quiz-answer">Answer 4</input>
-                    </label>
-                    </form>
+                <button  id="quiz-answerTrue" class="question-control">Answer 1</button>
+                <button  id="quiz-answer" class="question-control">Answer 2</button>
+                <button  id="quiz-answer" class="question-control">Answer 3</button>
+                <button  id="quiz-answer" class="question-control">Answer 4</button>
             </div>
         </div>
     </div>   
