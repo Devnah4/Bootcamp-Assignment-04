@@ -12,17 +12,17 @@
   
 <body>
     <div class="quiz-box">
-        <div class="quiz-top">
             <button class="quiz-nav-btn" onclick="" id="quiz-score">View High Score</button>
             <h2 class="quiz-nav-btn" id="quiz-time">Timer</h2>
         </div>
         <div class="quiz-jumbo">
-            <div class="quiz-title" visible>
+            
+            <div class="quiz-title" class="hidden">
             <header>
                 <h1>Coding Quiz Challenge</h1>
             </header>
             </div>
-            <div class="quiz-text" visible>
+            <div class="quiz-text" class="hidden">
                 <p id="quiz-body">
                     <br>
                     Hello Student, hope you're ready to test your kowledge!
@@ -35,10 +35,11 @@
                     </br>
                 </p>
             </div> 
+
             <div class="quiz-box-btn">
                 <button class="quiz-btn" id="quiz-start" onClick="startQuiz()">Begin</button>
             </div>
-            <div class="quiz-question-set" hidden>
+            <div class="quiz-question-set" class="hidden">
                 <h1 class="quiz-text">This is a Question</h1>
                 <button  id="quiz-answerTrue" class="question-control">Answer 1</button>
                 <button  id="quiz-answer" class="question-control">Answer 2</button>

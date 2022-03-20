@@ -8,15 +8,27 @@ const quizWrong = document.getElementById("quiz-answer");
 const quizBox = document.getElementById("quiz-question-set");
 const startPage = document.getElementById("quiz-text");
 const startButton = document.getElementById("quiz-button");
+const startBox = document.getElementById("quiz-top")
 const totalTime = 75;
 const totalPoints = 0;
+var activeSection;
+
+// Unhide startCode
+window.onload=function(){
+    startBox.classList.remove("hidden");
+    activeSection = startBox;
+    timer.textContent = totalTime;
+
+    // if(totalPoints === null) {
+    //     totalPoints[];
+    // }
+}
 
 // Start Quiz Code
 document.getElementById("quiz-start").onclick = startQuiz;
 
-function startQuiz () {
-    startPage.innerHTML = 'You did it billy';
-}
+// Question Response Code
+
 
 // Code for High Score
 var score=[];
@@ -29,15 +41,6 @@ quizStart.addEventListener("click", function() {
     console.log('Start');
 });
 
-function hideStart() {
-    var x = document.getElementById("quiz-text");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-}
-
 quizAnswer.addEventListener("click", function() {
     console.log('Right');
 });
@@ -45,8 +48,6 @@ quizAnswer.addEventListener("click", function() {
 quizWrong.addEventListener("click", function() {
     console.log('Wrong');  
 });
-// Create The Questions
-
 
 // Questions
 let codeQuestions = [
@@ -54,25 +55,37 @@ let codeQuestions = [
         set: 1,
         question: "What does HTML stand for?",
         answer: "Hyper Text Markup Language",
+        true: "True",
         wrong1: "Hyper Thyroid Makeup Laser",
+        statement1: "false",
         wrong2: "Hyper Text Multi Language",
+        statement2: "false",
         wrong3: "Hip Totalitarian Model Language",
+        statement3: "false",
     },
     {
         set: 2,
         question: "What does CSS stand for?",
         answer: "Cascading Style Sheet",
+        true: "True",
         wrong1: "Crazy Sick style",
+        statement1: "false",
         wrong2: "Cascading Symmetry Styles",
+        statement2: "false",
         wrong3: "Cool Skin Sheet",
+        statement3: "false",
     },
     {
         set: 3,
         question: "Javascript first apperaed when?",
         answer: "1995",
+        true: "True",
         wrong1: "2000",
-        wrong2: "1993",  
-        wrong3: "2010",  
+        statement1: "false",
+        wrong2: "1993",
+        statement2: "false",  
+        wrong3: "2010",
+        statement3: "false",  
     },
     // {
     //     set: 4,
@@ -153,10 +166,7 @@ let codeQuestions = [
     // }
 ]
 
-// Submit the questions
-
-
-
+// Save the Score
 var saveScore = function() {
     localStorage.setItem("score", JSON.stringify(score));
 }
